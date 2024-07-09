@@ -1,0 +1,35 @@
+PC1> ip 10.0.0.1/24
+Checking for duplicate address...
+PC1 : 10.0.0.1 255.255.255.0
+
+PC1> show ip
+
+NAME        : PC1[1]
+IP/MASK     : 10.0.0.1/24
+GATEWAY     : 0.0.0.0
+DNS         :
+MAC         : 00:50:79:66:68:00
+LPORT       : 20004
+RHOST:PORT  : 127.0.0.1:20005
+MTU         : 1500
+
+PC1> ping 10.0.0.2
+
+84 bytes from 10.0.0.2 icmp_seq=1 ttl=64 time=8.278 ms
+84 bytes from 10.0.0.2 icmp_seq=2 ttl=64 time=9.189 ms
+^[[A84 bytes from 10.0.0.2 icmp_seq=3 ttl=64 time=4.157 ms
+84 bytes from 10.0.0.2 icmp_seq=4 ttl=64 time=4.787 ms
+84 bytes from 10.0.0.2 icmp_seq=5 ttl=64 time=5.967 ms
+
+PC1> ping 10.0.0.1
+
+10.0.0.1 icmp_seq=1 ttl=64 time=0.001 ms
+10.0.0.1 icmp_seq=2 ttl=64 time=0.001 ms
+10.0.0.1 icmp_seq=3 ttl=64 time=0.001 ms
+10.0.0.1 icmp_seq=4 ttl=64 time=0.001 ms
+10.0.0.1 icmp_seq=5 ttl=64 time=0.001 ms
+
+PC1> ping 10.0.0.2
+
+host (10.0.0.2) not reachable
+
